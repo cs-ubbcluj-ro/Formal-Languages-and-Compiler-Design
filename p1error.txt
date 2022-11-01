@@ -1,0 +1,11 @@
+a = input_integer();
+b = input_integer();
+c = input_integer();
+int minimum_number;
+minimum_number = a;
+if (b < a) {
+minimum_number = b;
+}
+if (c < minimum_ number)
+minimum_number = c;
+print(“The minimum number is: ” + minimum_number);

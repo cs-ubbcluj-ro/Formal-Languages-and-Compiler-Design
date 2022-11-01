@@ -1,0 +1,9 @@
+integer sum = 0 , n;
+n = input_integer();
+integer i = 0;
+while (i < n) {
+    integer number;
+    number = input_integer();
+    sum = sum + number;
+}
+print(sum);

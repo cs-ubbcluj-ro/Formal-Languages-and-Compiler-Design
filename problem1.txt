@@ -1,0 +1,17 @@
+integer a;
+a = input_integer();
+integer i = 2;
+boolean prime = true;
+
+while (i < a / 2 A prime == true) {
+    if (a mod i == 0) {
+        prime = false;
+    }
+    i = i + 1;
+}
+if(prime == true) {
+print(“The number is prime”);
+}
+elif (prime == false) {
+print(“Thenumberisnotprime”);
+}

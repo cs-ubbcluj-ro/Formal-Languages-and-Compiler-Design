@@ -1,0 +1,12 @@
+integer a , b , c;
+a = input_integer();
+b = input_integer();
+c = input_integer();
+integer max_number;
+max_number = a;
+if (b > a) {
+max_number = b;
+}
+if (c > max_number) {
+ max_number = c;
+}
