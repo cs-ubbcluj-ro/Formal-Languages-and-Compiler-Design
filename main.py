@@ -257,11 +257,11 @@ class Compiler :
 		for line in text:
 			line = line.split(" ")
 
-			print(line)
+			#print(line)
 			for elem in line:
 				if(elem != ""):
 					elem = elem.strip()
-					print(elem)
+					#print(elem)
 					rw = self.reservedKeywordTable.find(elem)
 					#print(rw)
 					if rw is None:
@@ -273,6 +273,7 @@ class Compiler :
 									self.PIF.insert(elem,(2,indexIndent))
 								else:
 									print("Alexical error " + lineNumber.__str__())
+									return
 							elif self.isConstant(elem):
 								indexConst = self.values.find(elem)
 								#print(indexConst)
@@ -280,8 +281,10 @@ class Compiler :
 									self.PIF.insert(elem,(1,indexConst))
 								else:
 									print("Blexical error " + lineNumber.__str__())
+									return
 							else:
-								print("Clexical error " + lineNumber.__str__())
+								print("Clexical error " + lineNumber.__str__() + " token : " + elem)
+								return ;
 					else:
 						self.PIF.insert(elem,(rw,-1))
 
@@ -331,7 +334,7 @@ class Compiler :
 
 if __name__ == '__main__':
 
-	problem1 =  "integer a;\n" \
+	problem1 =  "\n" \
 			"a = 11 ;\n"\
 			"integer i = 2;\n"\
 			"boolean prime = true;\n" \

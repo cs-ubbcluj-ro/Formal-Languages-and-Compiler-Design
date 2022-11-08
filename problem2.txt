@@ -2,6 +2,7 @@ integer a , b , c;
 a = input_integer();
 b = input_integer();
 c = input_integer();
+integer 123asd;
 integer max_number;
 max_number = a;
 if (b > a) {
